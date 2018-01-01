@@ -10,7 +10,7 @@ public class AngularSDKGenerator {
 
     public static void main(String [] args) throws IOException {
 
-        String angularProject = "D:\\Projects\\IntelliJ\\concrete-archetype\\example\\release\\angular-jaxrs";
+        String angularProject = "path/to/your/project/root";
         API.generate(AngularWebSocketCodeRender.RENDER_NAME+".websocket",
                 angularProject + "/src",
                 ExampleApi.class.getPackage().getName());

@@ -8,7 +8,7 @@ package org.coodex.example;
 public class RXGenerator {
 
     public static void main(String [] args) throws IOException {
-        String projectPath = "D:\\Projects\\IntelliJ\\concrete-archetype\\example\\release\\jaxrs";
+        String projectPath = "path/to/your/project/root";
         API.generate(ReactiveStreamsRender.RENDER_NAME,
                 projectPath + "/src/test/java",
                 ExampleApi.class.getPackage().getName());

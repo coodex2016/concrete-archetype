@@ -9,7 +9,7 @@ import java.io.IOException;
 public class JQuerySDKGenerator {
 
     public static void main(String [] args) throws IOException {
-        String projectPath = "D:\\Projects\\IntelliJ\\concrete-archetype\\example\\release\\websocket";
+        String projectPath = "path/to/your/project/root";
         API.generate(JQueryWebSocketCodeRender.RENDER_NAME,
                 projectPath + "/src/main/resources/static/jquery",
                 ExampleApi.class.getPackage().getName());
