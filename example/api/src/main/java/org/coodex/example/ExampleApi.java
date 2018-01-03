@@ -5,6 +5,7 @@ import org.coodex.concrete.api.ConcreteService;
 import org.coodex.concrete.api.Description;
 import org.coodex.concrete.api.MicroService;
 import org.coodex.concrete.api.mockers.VehicleNum;
+import org.coodex.concrete.api.pojo.StrID;
 import org.coodex.util.Parameter;
 
 @MicroService("example")
@@ -33,5 +34,17 @@ public interface ExampleApi extends ConcreteService {
      */
     @AccessAllow
     String aclTest();
+
+    @MicroService("vehicles")
+    // post method
+    StrID<VehicleInfo> saveVehicle(@Parameter("info")VehicleInfo info);
+
+    @MicroService("vehicles")
+    // delete method
+    void delete(@Parameter("vehId") String vehId);
+
+    @MicroService("vehicles")
+    // put method
+    StrID<VehicleInfo> updateVehicle(@Parameter("id") String id, @Parameter("info")VehicleInfo info);
 
 }

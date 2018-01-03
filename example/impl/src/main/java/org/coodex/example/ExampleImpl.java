@@ -1,8 +1,11 @@
 package org.coodex.example;
 
+import org.coodex.concrete.api.pojo.StrID;
 import org.coodex.concrete.common.Assert;
 import org.coodex.example.entities.AddId;
 import org.coodex.example.repos.AddEntityRepo;
+import org.coodex.util.Common;
+import org.coodex.util.Parameter;
 
 import javax.inject.Inject;
 
@@ -26,5 +29,23 @@ public class ExampleImpl implements ExampleApi {
     @Override
     public String aclTest() {
         return null;
+    }
+
+    @Override
+    public StrID<VehicleInfo> saveVehicle(
+             VehicleInfo info) {
+        return new StrID<>(Common.getUUIDStr(), info);
+    }
+
+    @Override
+    public void delete(String vehId) {
+
+    }
+
+    @Override
+    public StrID<VehicleInfo> updateVehicle(
+            String id,
+            VehicleInfo info) {
+        return new StrID<>(id, info);
     }
 }
