@@ -7,7 +7,7 @@
     <groupId>org.coodex.archetypes</groupId>
     <artifactId>concrete-archetype</artifactId>
     <packaging>pom</packaging>
-    <version>0.2.2-SNAPSHOT</version>
+    <version>0.2.1</version>
     <modules>
         <module>example/api</module>
         <module>example/release/jaxrs</module>
